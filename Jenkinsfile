@@ -1,14 +1,10 @@
 pipeline {
-  stages{
-    stage('checkout') {
-      steps {
-        checkout scm
-      }
+    agent any
+    stages {
+        stage('Hello') {
+            steps {
+                sh './terraformw apply -auto-approve -no-color'
+            }
+        }
     }
-    stage('terraform') {
-      steps {
-        sh './terraformw apply -auto-approve -no-color'
-      }
-    }
-  }
 }
