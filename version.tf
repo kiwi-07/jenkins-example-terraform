@@ -1,3 +1,8 @@
 terraform {
-  required_version = "1.0.0"
+  required_providers {
+    delphix = {
+      source  = "delphix-integrations/delphix"
+      version = "3.1.0"
+    }
+  }
 }
